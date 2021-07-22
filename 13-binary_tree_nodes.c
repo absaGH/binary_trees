@@ -21,8 +21,8 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 		{
 			nodenum += 0;
 		}
-		nodenum += binary_tree_leaves(tree->left);
-		nodenum += binary_tree_leaves(tree->right);
+		nodenum += binary_tree_nodes(tree->left);
+		nodenum += binary_tree_nodes(tree->right);
 	}
 	return (nodenum);
 }
